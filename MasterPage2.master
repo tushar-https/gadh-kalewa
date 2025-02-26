@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--bootstrap css--%>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<%--bootstrap js--%>
+<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+    .header{
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: var(--box-shadow);
+   position: sticky;
+   top:0; left:0; right: 0;
+   background: var(--white);
+   z-index: 1000;
+}
+
+.header .logo{
+   font-size: 2rem;
+   font-weight: bolder;
+   color:var(--black);
+}
+
+.header .logo i{
+   color:var(--peru);
+   padding-right: .5rem;
+}
+
+.header .navbar a{
+   
+   font-size: 1rem;
+   margin-left: 2rem;
+   color:var(--light-black);
+}
+
+.header .navbar a:hover{
+   color:var(--peru);
+}
+
+#menu-btn{
+   font-size: 2.5rem;
+   cursor: pointer;
+   color:var(--black);
+   display: none;
+}
+
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <section class="header">
+    <nav class="navbar navbar-dark bg-light">
+  <div class="container">
+<div class="pl-5 pl-md-3 m-auto m-md-0">
+                   <a href="#" class="logo"> <i class="fas fa-utensils"></i> गढ़ कलेवा </a>
+            </div>
+
+     <ul class="nav justify-content-end">
+  <li class="nav-item">
+  
+<asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" 
+          onclick="LinkButton1_Click1"><i class=" fa-solid fa-right-to-bracket"></i>Add Category</asp:LinkButton>
+  </li>
+   <li class="nav-item">
+    
+<asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" 
+           onclick="LinkButton2_Click" Visible="True">Logout</asp:LinkButton>
+  </li>
+   <li class="nav-item">
+
+    <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" 
+           onclick="LinkButton4_Click">Add Food</asp:LinkButton>
+  </li>
+   <li class="nav-item">
+   <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" 
+           onclick="LinkButton3_Click">View Orders</asp:LinkButton>
+  </li>
+</ul>
+  </div>
+</nav>
+</section>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+
+    </form>
+</body>
+</html>

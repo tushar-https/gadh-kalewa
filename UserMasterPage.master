@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Complete Responsive Food / Restaurant Website Design Tutorial</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <!-- custom css file link  -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- header section starts     -->
+
+<section class="header">
+
+   <a href="#" class="logo"> <i class="fas fa-utensils"></i> गढ़ कलेवा </a>
+
+   <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#food">food</a>
+      <a href="#gallery">gallery</a>
+      <a href="#menu">menu</a>
+      <a href="#order">order</a>
+      <a href="Adminlogin.aspx">admin login </a>
+    
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends    -->
+ 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="icons-container">
+        
+      <div class="icons">
+         <i class="fas fa-clock"></i>
+         <h3>opening hours</h3>
+         <p>07:00am to 10:00pm</p>
+      </div>
+
+      <div class="icons">
+         <i class="fas fa-phone"></i>
+         <h3>phone</h3>
+         <p>+91 782842418</p>
+         <p>+91 7581944322</p>
+      </div>
+
+      <div class="icons">
+         <i class="fas fa-envelope"></i>
+         <h3>email</h3>
+         <p>vjhalpure@gmail.com</p>
+         <p>ghanshyamjhalpure@gmail.com</p>
+           <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Admin Login</asp:LinkButton>
+      </div>
+
+      <div class="icons">
+         <i class="fas fa-map"></i>
+         <h3>address</h3>
+         <p>DURG, india - 491001</p>
+      </div>
+
+   </div>
+
+  
+
+   <div class="credit"> created by <span>गढ़ कलेवा</span> | all rights reserved! </div>
+
+</section>
+    </form>
+</body>
+</html>
